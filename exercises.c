@@ -131,11 +131,11 @@ int parentesisBalanceados(char *cadena) {
         if (c == '(' || c == '[' || c == '{') {
             char *charPtr = malloc(sizeof(char));
             *charPtr = c;
-            pushBack(pila, charPtr);
+            push(pila, charPtr);
         } 
         else if (c == ')' || c == ']' || c == '}') {
             char *topChar = (char *) top(pila);
-            if (topChar == NULL) {  // Pila vacía
+            if (topChar == NULL) {  
                 free(pila);
                 return 0;
             }
