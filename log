@@ -4,3 +4,17 @@ Fri, Mar 21, 2025  8:39:19 AM:
  tests:  1|4
 total_score: 10/70
 3f6cb15
+Fri, Mar 21, 2025  8:40:31 AM: 
+ exercises.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'sumaLista':
+exercises.c:69:18: error: expected expression before 'List'
+       ptr = next(List);
+                  ^~~~
+exercises.c:71:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+7232667
