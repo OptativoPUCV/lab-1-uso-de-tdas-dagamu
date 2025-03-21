@@ -124,32 +124,42 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena) {
    Stack* pila = create_stack();
-
+    
     for (int i = 0; cadena[i] != '\0'; i++) {
         char c = cadena[i];
 
-        if (c == '(' || c == '[' || c == '{')
-            pushBack(pila, cadena + i);
-
-       else if (c == ')' || c == ']' || c == '}') {
+        if (c == '(' || c == '[' || c == '{') {
+            char *charPtr = malloc(sizeof(char));
+            *charPtr = c;
+            pushBack(pila, charPtr);
+        } 
+        else if (c == ')' || c == ']' || c == '}') {
             char *topChar = (char *) top(pila);
-            if (topChar == NULL) { printf("%c %c", c, *topChar); free(pila); return 0; } 
+            if (topChar == NULL) {  // Pila vacía
+                free(pila);
+                return 0;
+            }
 
             if ((c == ')' && *topChar != '(') ||
                 (c == ']' && *topChar != '[') ||
                 (c == '}' && *topChar != '{')) {
-               printf("%c %c", c, *topChar);
-               free(pila);
-               return 0; 
+                free(topChar);
+                free(pila);
+                return 0;
             }
 
-            pop(pila);
+            free(pop(pila));
         }
     }
 
-    int resultado = top(pila) == NULL;
+    int resultado = is_empty(pila);
+
+    // Liberar memoria restante
+    while (!is_empty(pila)) {
+        free(pop(pila));
+    }
     free(pila);
-    printf("%i", resultado);
+
     return resultado;
 }
 
