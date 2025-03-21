@@ -129,7 +129,7 @@ int parentesisBalanceados(char *cadena) {
         char c = cadena[i];
 
         if (c == '(' || c == '[' || c == '{')
-            pushBack(pila, cadena + i );
+            pushBack(pila, cadena + i);
 
        else if (c == ')' || c == ']' || c == '}') {
             char *topChar = (char *) top(pila);
@@ -149,7 +149,7 @@ int parentesisBalanceados(char *cadena) {
 
     int resultado = top(pila) == NULL;
     free(pila);
-    printf("%c", resultado);
+    printf("%i", resultado);
     return resultado;
 }
 
