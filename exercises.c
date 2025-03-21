@@ -111,6 +111,8 @@ void copia_pila(Stack* P1, Stack* P2) {
       pop(aux_stack);
    }
 
+   free(aux_stack);
+
 }
 
 /*
@@ -131,17 +133,21 @@ int parentesisBalanceados(char *cadena) {
 
        else if (*ptrC == ')' || *ptrC == ']' || *ptrC == '}') {
             char *topChar = (char *) top(pila);
-            if (topChar == NULL) return 0; 
+            if (topChar == NULL) { free(pila); return 0; } 
 
             if ((*ptrC == ')' && *topChar != '(') ||
                 (*ptrC == ']' && *topChar != '[') ||
                 (*ptrC == '}' && *topChar != '{')) {
-                return 0; 
+               free(pila);
+               return 0; 
             }
 
             pop(pila);
         }
     }
-    return top(pila) == NULL;
+
+    int resultado = top(pila) == NULL;
+    free(pila);
+    return resultado;
 }
 
