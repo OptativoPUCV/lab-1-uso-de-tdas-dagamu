@@ -197,3 +197,23 @@ arraylist.h:20:6: note: expected 'void *' but argument is of type 'char'
 cc1.exe: all warnings being treated as errors
 Compilation failed
 1009422
+Fri, Mar 21, 2025  8:59:47 AM: 
+ exercises.c | 16 +++++++++-------
+ 1 file changed, 9 insertions(+), 7 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'copia_pila':
+exercises.c:100:15: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+    while( ptr = top(P1) != NULL )
+               ^
+exercises.c:100:4: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+    while( ptr = top(P1) != NULL )
+    ^~~~~
+exercises.c:106:15: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+    while( ptr = top(aux_stack) != NULL )
+               ^
+exercises.c:106:4: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+    while( ptr = top(aux_stack) != NULL )
+    ^~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+56d916a
