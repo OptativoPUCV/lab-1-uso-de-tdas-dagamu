@@ -152,7 +152,7 @@ int parentesisBalanceados(char *cadena) {
         }
     }
 
-    int resultado = is_empty(pila);
+    int resultado = top(pila) == NULL;
 
     // Liberar memoria restante
     while (top(pila) != NULL) {
