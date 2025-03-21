@@ -133,12 +133,12 @@ int parentesisBalanceados(char *cadena) {
 
        else if (c == ')' || c == ']' || c == '}') {
             char *topChar = (char *) top(pila);
-            if (topChar == NULL) { puts(c); puts(topChar); free(pila); return 0; } 
+            if (topChar == NULL) { printf("%c %c", c, topChar) free(pila); return 0; } 
 
             if ((c == ')' && *topChar != '(') ||
                 (c == ']' && *topChar != '[') ||
                 (c == '}' && *topChar != '{')) {
-               puts(c); puts(topChar);
+               printf("%c %c", c, topChar)
                free(pila);
                return 0; 
             }

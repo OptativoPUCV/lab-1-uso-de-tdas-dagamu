@@ -371,3 +371,23 @@ c:\mingw\include\stdio.h:677:41: note: expected 'const char *' but argument is o
 cc1.exe: all warnings being treated as errors
 Compilation failed
 978a292
+Fri, Mar 21, 2025  9:19:54 AM: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:136:48: error: format '%c' expects argument of type 'int', but argument 3 has type 'char *' [-Werror=format=]
+             if (topChar == NULL) { printf("%c %c", c, topChar) free(pila); return 0; }
+                                                ^
+exercises.c:136:64: error: expected ';' before 'free'
+             if (topChar == NULL) { printf("%c %c", c, topChar) free(pila); return 0; }
+                                                                ^~~~
+exercises.c:141:28: error: format '%c' expects argument of type 'int', but argument 3 has type 'char *' [-Werror=format=]
+                printf("%c %c", c, topChar)
+                            ^
+exercises.c:142:16: error: expected ';' before 'free'
+                free(pila);
+                ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+87b1712
