@@ -446,3 +446,14 @@ exercises.c:155:21: error: implicit declaration of function 'is_empty' [-Werror=
 cc1.exe: all warnings being treated as errors
 Compilation failed
 dc791b6
+Fri, Mar 21, 2025  9:28:57 AM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:155:21: error: implicit declaration of function 'is_empty' [-Werror=implicit-function-declaration]
+     int resultado = is_empty(pila);
+                     ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+39e123f
