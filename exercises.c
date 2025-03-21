@@ -149,6 +149,7 @@ int parentesisBalanceados(char *cadena) {
 
     int resultado = top(pila) == NULL;
     free(pila);
+    printf("%c", resultado);
     return resultado;
 }
 
