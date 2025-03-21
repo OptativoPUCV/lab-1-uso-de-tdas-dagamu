@@ -138,6 +138,8 @@ int parentesisBalanceados(char *cadena) {
                 (*ptrC == '}' && *topChar != '{')) {
                 return 0; 
             }
+
+            pop(pila);
         }
     }
     return top(pila) != NULL;
