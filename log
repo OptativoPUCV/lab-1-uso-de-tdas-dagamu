@@ -309,3 +309,42 @@ Fri, Mar 21, 2025  9:16:52 AM:
  tests:  4|1
 total_score: 50/70
 129833d
+Fri, Mar 21, 2025  9:19:12 AM: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:136:41: error: passing argument 1 of 'puts' makes pointer from integer without a cast [-Werror=int-conversion]
+             if (topChar == NULL) { puts(c); puts(*topChar); free(pila); return 0; }
+                                         ^
+In file included from test.c:1:0:
+c:\mingw\include\stdio.h:677:41: note: expected 'const char *' but argument is of type 'char'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int    puts (const char *);
+                                         ^~~~
+In file included from test.c:5:0:
+exercises.c:136:50: error: passing argument 1 of 'puts' makes pointer from integer without a cast [-Werror=int-conversion]
+             if (topChar == NULL) { puts(c); puts(*topChar); free(pila); return 0; }
+                                                  ^
+In file included from test.c:1:0:
+c:\mingw\include\stdio.h:677:41: note: expected 'const char *' but argument is of type 'char'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int    puts (const char *);
+                                         ^~~~
+In file included from test.c:5:0:
+exercises.c:141:21: error: passing argument 1 of 'puts' makes pointer from integer without a cast [-Werror=int-conversion]
+                puts(c); puts(*topChar);
+                     ^
+In file included from test.c:1:0:
+c:\mingw\include\stdio.h:677:41: note: expected 'const char *' but argument is of type 'char'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int    puts (const char *);
+                                         ^~~~
+In file included from test.c:5:0:
+exercises.c:141:30: error: passing argument 1 of 'puts' makes pointer from integer without a cast [-Werror=int-conversion]
+                puts(c); puts(*topChar);
+                              ^
+In file included from test.c:1:0:
+c:\mingw\include\stdio.h:677:41: note: expected 'const char *' but argument is of type 'char'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int    puts (const char *);
+                                         ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+711e593
