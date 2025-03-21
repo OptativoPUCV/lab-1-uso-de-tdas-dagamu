@@ -29,3 +29,36 @@ Fri, Mar 21, 2025  8:42:31 AM:
  1 file changed, 3 insertions(+), 1 deletion(-)
  tests:  0|0
 8e85b75
+Fri, Mar 21, 2025  8:54:05 AM: 
+ exercises.c | 33 +++++++++++++++++++++++++++++++++
+ 1 file changed, 33 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'copia_pila':
+exercises.c:100:15: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+    while( ptr = top(P1) != NULL )
+               ^
+exercises.c:100:4: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+    while( ptr = top(P1) != NULL )
+    ^~~~~
+exercises.c:106:15: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+    while( ptr = top(aux_stack) != NULL )
+               ^
+exercises.c:106:4: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+    while( ptr = top(aux_stack) != NULL )
+    ^~~~~
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:129:28: error: passing argument 2 of 'pushBack' makes pointer from integer without a cast [-Werror=int-conversion]
+             pushBack(pila, c);
+                            ^
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:20:6: note: expected 'void *' but argument is of type 'char'
+ void pushBack(List *L, void *dato);
+      ^~~~~~~~
+In file included from test.c:5:0:
+exercises.c:140:16: error: comparison between pointer and integer [-Werror]
+     return top == 1;
+                ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+2d6d7a1
