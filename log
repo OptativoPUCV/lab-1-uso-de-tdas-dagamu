@@ -168,3 +168,32 @@ exercises.c:139:16: error: comparison between pointer and integer [-Werror]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 f00ab0a
+Fri, Mar 21, 2025  8:58:09 AM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'copia_pila':
+exercises.c:100:15: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+    while( ptr = top(P1) != NULL )
+               ^
+exercises.c:100:4: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+    while( ptr = top(P1) != NULL )
+    ^~~~~
+exercises.c:106:15: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+    while( ptr = top(aux_stack) != NULL )
+               ^
+exercises.c:106:4: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+    while( ptr = top(aux_stack) != NULL )
+    ^~~~~
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:128:28: error: passing argument 2 of 'pushBack' makes pointer from integer without a cast [-Werror=int-conversion]
+             pushBack(pila, c);
+                            ^
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:20:6: note: expected 'void *' but argument is of type 'char'
+ void pushBack(List *L, void *dato);
+      ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+1009422

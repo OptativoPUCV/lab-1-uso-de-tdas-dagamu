@@ -136,6 +136,6 @@ int parentesisBalanceados(char *cadena) {
             }
         }
     }
-    return top == 1;
+    return 1;
 }
 
